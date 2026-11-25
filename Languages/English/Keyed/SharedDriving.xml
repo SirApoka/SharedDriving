@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- Toggle -->
+  <SD_CommandLabel>Shared driving</SD_CommandLabel>
+  <SD_CommandDesc>Drivers take turns so the caravan can keep moving at night.
+
+Each vehicle has a day driver and a night driver. From 6:00 to 18:00 the day driver drives. From 18:00 to 6:00 the night driver takes the wheel and the day driver sleeps in a passenger seat. Gunners stay at their turrets. The "Rest" button still stops the caravan.
+
+The day driver is whoever is at the wheel during the day. The night driver is the most rested passenger who can drive, unless you choose one: right-click here, or put a pawn at the wheel during the night in the caravan's "Pawns" tab.
+
+Turning this off puts every driver back in their seat.</SD_CommandDesc>
+  <SD_CommandDisabledNoCoDriver>No vehicle in this caravan can be shared:\n{0}</SD_CommandDisabledNoCoDriver>
+
+  <!-- Tooltip status -->
+  <SD_StatusHeader>Status:</SD_StatusHeader>
+  <SD_StatusOff>Off. The caravan rests at night.</SD_StatusOff>
+  <SD_StatusDayShift>Day shift: day drivers are driving.</SD_StatusDayShift>
+  <SD_StatusNightShift>Night shift: night drivers are driving.</SD_StatusNightShift>
+  <SD_StatusWillRest>The caravan will still rest at night:</SD_StatusWillRest>
+  <SD_NextChangeAt>Next shift change at {0} (in {1} hours).</SD_NextChangeAt>
+  <SD_VehicleLine>{0}: day driver {1}, night driver {2}</SD_VehicleLine>
+  <SD_VehicleLineNight>{0}: night driver {1} drives, day driver {2} sleeps</SD_VehicleLineNight>
+  <SD_VehicleLineNightOnly>{0}: {1} drives (nobody else can take over at 6:00)</SD_VehicleLineNightOnly>
+  <SD_VehicleAutonomous>{0}: drives itself</SD_VehicleAutonomous>
+  <SD_CoDriverAuto>{0} (automatic)</SD_CoDriverAuto>
+  <SD_CoDriverChosen>{0} (chosen)</SD_CoDriverChosen>
+  <SD_CoDriverNone>none available</SD_CoDriverNone>
+  <SD_NoDriver>nobody</SD_NoDriver>
+
+  <!-- Reasons the caravan cannot drive through the night -->
+  <SD_ReasonOutsidePeople>Outside the vehicles (on foot or riding): {0}</SD_ReasonOutsidePeople>
+  <SD_ReasonOutsideAnimals>Animals outside the vehicles: {0}. Animals can travel in a vehicle's cargo: drag them onto the vehicle's "{2}" area in the caravan's "{1}" tab</SD_ReasonOutsideAnimals>
+  <SD_ReasonNoCoDriver>{0} has no passenger who can be the night driver ({1} seat)</SD_ReasonNoCoDriver>
+  <SD_ReasonNoDriver>{0} has nobody in the {1} seat</SD_ReasonNoDriver>
+
+  <!-- Right-click menu -->
+  <SD_MenuAutomatic>{0}: automatic night driver</SD_MenuAutomatic>
+  <SD_MenuPick>{0}: night driver {1}</SD_MenuPick>
+  <SD_MenuCurrent>(current)</SD_MenuCurrent>
+  <SD_MenuNoVehicles>No vehicle needs a night driver.</SD_MenuNoVehicles>
+
+  <!-- Messages -->
+  <SD_MessageNightShift>{0}: night shift. {1}</SD_MessageNightShift>
+  <SD_MessageSwapNight>{1} takes over from {2} in {0}</SD_MessageSwapNight>
+  <SD_MessageDayShift>{0}: day shift. Day drivers are back at the wheel.</SD_MessageDayShift>
+  <SD_MessageRestored>{0}: shared driving off. Drivers are back in their seats.</SD_MessageRestored>
+  <SD_MessageNewNightDriver>{0}: {2} is now the night driver of the {1}.</SD_MessageNewNightDriver>
+  <SD_MessageWillRest>{0} will stop and rest tonight. {1}</SD_MessageWillRest>
+
+  <!-- Seat assignment dialog -->
+  <SD_SeatCoDriver>Night driver: {0}</SD_SeatCoDriver>
+  <SD_SeatCoDriverTip>Used by Shared driving: from 18:00 to 6:00 this passenger drives while the day driver sleeps.
+
+Click to choose.</SD_SeatCoDriverTip>
+  <SD_SeatCoDriverNoneTip>Shared driving needs a passenger who can drive this vehicle. Assign one to a passenger seat.</SD_SeatCoDriverNoneTip>
+  <SD_SeatMenuAutomatic>Automatic (most rested)</SD_SeatMenuAutomatic>
+  <SD_SeatMenuNoCandidates>No assigned passenger can drive this vehicle</SD_SeatMenuNoCandidates>
+  <SD_SeatEligible>Can take this seat: {0}</SD_SeatEligible>
+  <SD_SeatNobodyEligible>Nobody here can take this seat.</SD_SeatNobodyEligible>
+  <SD_TipCanDrive>{0} can drive the {1}.</SD_TipCanDrive>
+  <SD_TipCannotDrive>{0} cannot drive the {1}:</SD_TipCannotDrive>
+  <SD_TipCanGun>{0} can man the {1}'s turrets.</SD_TipCanGun>
+  <SD_TipCannotGun>{0} cannot man the {1}'s turrets:</SD_TipCannotGun>
+  <SD_TipDayDriver>{0} is the {1}'s day driver (Shared driving).</SD_TipDayDriver>
+  <SD_TipCoDriver>{0} is the {1}'s night driver (Shared driving).</SD_TipCoDriver>
+
+  <!-- Seat requirements -->
+  <SD_ReqPassenger>Passenger seat: anyone can sit here.</SD_ReqPassenger>
+  <SD_ReqBase>Needs someone who can use tools, manipulate and is conscious; not downed, in a mental state, a prisoner or a mechanoid; same faction as the vehicle.</SD_ReqBase>
+  <SD_ReqTurret>Must be capable of violence.</SD_ReqTurret>
+  <SD_ReqProficiency>Progression: Education: requires {0} proficiency.</SD_ReqProficiency>
+  <SD_WhyNotToolUser>cannot use tools</SD_WhyNotToolUser>
+  <SD_WhyNotViolence>incapable of violence</SD_WhyNotViolence>
+  <SD_WhyNotDowned>downed</SD_WhyNotDowned>
+  <SD_WhyNotMental>in a mental state</SD_WhyNotMental>
+  <SD_WhyNotPrisoner>prisoner</SD_WhyNotPrisoner>
+  <SD_WhyNotMech>mechanoid</SD_WhyNotMech>
+  <SD_WhyNotManipulation>cannot manipulate</SD_WhyNotManipulation>
+  <SD_WhyNotConsciousness>not conscious</SD_WhyNotConsciousness>
+  <SD_WhyNotFaction>not of the vehicle's faction</SD_WhyNotFaction>
+  <SD_WhyNotOther>blocked by a requirement from another mod</SD_WhyNotOther>
+
+  <!-- Inspect string -->
+  <SD_InspectDay>Shared driving: day shift</SD_InspectDay>
+  <SD_InspectNight>Shared driving: night shift</SD_InspectNight>
+  <SD_InspectWillRest>Shared driving: on, but the caravan will rest tonight</SD_InspectWillRest>
+
+</LanguageData>

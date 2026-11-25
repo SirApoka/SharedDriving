@@ -1,0 +1,55 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    Build (needs the .NET 10 SDK): dotnet build -c Release
+
+    Single target net10.0 against the exact binaries the game runs:
+      - the installed game's Assembly-CSharp.dll / UnityStubs.dll (RimWorldDir)
+      - Vehicle Framework 1.7 assemblies from the Workshop folder (compiled for .NET 10 themselves)
+    Output goes to ..\1.7\Assemblies\. None of the referenced DLLs are copied.
+  -->
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <AssemblyName>SharedDriving</AssemblyName>
+    <RootNamespace>SharedDriving</RootNamespace>
+    <Nullable>disable</Nullable>
+    <DebugType>none</DebugType>
+    <GenerateDocumentationFile>false</GenerateDocumentationFile>
+    <CopyLocalLockFileAssemblies>false</CopyLocalLockFileAssemblies>
+    <OutputPath>..\1.7\Assemblies\</OutputPath>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <GenerateDependencyFile>false</GenerateDependencyFile>
+    <RimWorldDir Condition="'$(RimWorldDir)' == ''">F:\SteamLibrary\steamapps\common\RimWorld</RimWorldDir>
+    <VehicleFrameworkDir Condition="'$(VehicleFrameworkDir)' == ''">F:\SteamLibrary\steamapps\workshop\content\294100\3014915404\1.7\Assemblies</VehicleFrameworkDir>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Lib.Harmony" Version="2.3.3" ExcludeAssets="runtime" PrivateAssets="all" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>$(RimWorldDir)\Assembly-CSharp.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityStubs">
+      <HintPath>$(RimWorldDir)\UnityStubs.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Vehicles">
+      <HintPath>$(VehicleFrameworkDir)\Vehicles.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="SmashTools">
+      <HintPath>$(VehicleFrameworkDir)\SmashTools.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="CoreLib">
+      <HintPath>$(VehicleFrameworkDir)\CoreLib.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+
+</Project>
