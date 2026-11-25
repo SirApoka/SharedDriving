@@ -4,6 +4,8 @@
 
 Team driving for [Vehicle Framework](https://steamcommunity.com/sharedfiles/filedetails/?id=3014915404) caravans. Drivers take turns, so the caravan keeps moving through the night. Requires [You Drive, I Sleep](https://steamcommunity.com/sharedfiles/filedetails/?id=3324430833).
 
+Steam Workshop: https://steamcommunity.com/sharedfiles/filedetails/?id=3845570247
+
 ## Why this exists
 
 With You Drive, I Sleep, passengers sleep on the road, but my vehicle caravans still stopped every night because the driver needed rest, even when a passenger could have taken the wheel.
